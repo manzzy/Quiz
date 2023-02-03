@@ -1,13 +1,35 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+	--ion-color-main: #614805;
+	--ion-color-main-rgb: 97,72,5;
+	--ion-color-main-contrast: #ffffff;
+	--ion-color-main-contrast-rgb: 255,255,255;
+	--ion-color-main-shade: #553f04;
+	--ion-color-main-tint: #715a1e;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.ion-color-main {
+	--ion-color-base: var(--ion-color-main);
+	--ion-color-base-rgb: var(--ion-color-main-rgb);
+	--ion-color-contrast: var(--ion-color-main-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-main-contrast-rgb);
+	--ion-color-shade: var(--ion-color-main-shade);
+	--ion-color-tint: var(--ion-color-main-tint);
+}
+
+:root {
+	--ion-color-shade: #e2d7b1;
+	--ion-color-shade-rgb: 226,215,177;
+	--ion-color-shade-contrast: #000000;
+	--ion-color-shade-contrast-rgb: 0,0,0;
+	--ion-color-shade-shade: #c7bd9c;
+	--ion-color-shade-tint: #e5dbb9;
+}
+
+.ion-color-shade {
+	--ion-color-base: var(--ion-color-shade);
+	--ion-color-base-rgb: var(--ion-color-shade-rgb);
+	--ion-color-contrast: var(--ion-color-shade-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-shade-contrast-rgb);
+	--ion-color-shade: var(--ion-color-shade-shade);
+	--ion-color-tint: var(--ion-color-shade-tint);
 }

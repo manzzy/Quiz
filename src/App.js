@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
 
+import { IonApp, IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/react';
+import { useState } from 'react';
+import './App.css';
+import QuestionCard from './components/QuestionCard';
+import Scoreboard from './components/Scoreboard';
+import question from './lib/question';
 function App() {
+  const [score, setScore] = useState(0);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <IonApp>
+      <IonHeader>
+          <IonToolbar color={'main'}>
+            <IonTitle>Quiz</IonTitle>
+          </IonToolbar>
+      </IonHeader>
+
+      <IonContent>
+          <Scoreboard upperBound={question.length} score={score} />
+          <QuestionCard questions={question} setScore={setScore} score={score}/>
+          {/* Question Card */}
+          
+      </IonContent>
+    </IonApp>
   );
 }
 
